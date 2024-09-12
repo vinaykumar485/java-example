@@ -1,23 +1,29 @@
-pipeline{
-	agent any
-	stages{
-        stage('Build stage') {
+pipeline {
+    agent none
+    stages {
+        stage ('git checkout') {
+            agent {label 'slave-node'}
+             steps {
+                echo 'this is git checkout stage' 
+            }
+        }
+        stage ('Build') {
+            agent {label 'slave-node'}
+             steps {
+                echo 'this is Build stage' 
+            }
+        }
+        stage ('Sona Qube') {
+            agent {label 'slave-node'}
+             steps {
+                echo 'this is Sona Qube stage' 
+            }
+        }
+        stage ('release') {
+            agent {label 'slave-node'}
             steps {
-                echo 'This is a build stage'
-				sh 'sleep 5'
-			}
-		}
-        stage('Push stage') {
-            steps {
-                echo 'This is push stage'
-                sh 'sleep 5'
-			}
-		}
-        stage('Deploy stage') {
-            steps {
-                echo 'This is deploy stage'
-                sh 'sleep 5'
-			}
-		}
-	}
+                echo 'this is release stage' 
+            }
+        }
+    }
 }	
