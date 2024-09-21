@@ -4,7 +4,7 @@ pipeline {
     environment {
         // Define your environment variables for tools and credentials
         SONARQUBE_SERVER = 'SonarQube'                                            // SonarQube server configured in Jenkins
-        SONARQUBE_TOKEN = sqp_06378a1a92b28504e8b563e99a0a7710616d7e9f            // Credentials ID for SonarQube token
+        SONARQUBE_TOKEN = 'sqp_06378a1a92b28504e8b563e99a0a7710616d7e9f'            // Credentials ID for SonarQube token
         ARTIFACTORY_URL = 'http://107.23.185.82:8081'
         ARTIFACTORY_CREDENTIALS = 'winay@8061'                                   // Credentials ID for Artifactory
     }
