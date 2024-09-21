@@ -11,8 +11,7 @@ pipeline {
             steps {
                 echo 'This is the Build stage'
                 // Run Maven commands for building and SonarQube analysis
-                sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=intigratioon -Dsonar.host.url=http://34.201.71.78:9000 -Dsonar.login=sqp_d77d4d2a6bf4d382026ac691191a060f83b4c0d6'
-            }
+                }
         }
         stage('SonarQube Analysis') {
             steps {
